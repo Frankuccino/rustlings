@@ -2,6 +2,31 @@
 
 This repository contains my progress and solutions while working through **Rustlings**, a set of small exercises designed to help developers learn the Rust programming language through hands-on practice.
 
+## Progress
+
+- [ ] Intro
+- [ ] Variables
+- [ ] Functions
+- [ ] If
+- [ ] Primitive Types
+- [ ] Vecs
+- [ ] Move Semantics
+- [ ] Structs
+- [ ] Enums
+- [ ] Strings
+- [ ] Modules
+- [ ] Hashmaps
+- [ ] Options
+- [ ] Error Handling
+- [ ] Generics
+- [ ] Lifetimes
+- [ ] Tests
+- [ ] Iterators
+- [ ] Smart Pointers
+- [ ] Threads
+- [ ] Macros
+- [ ] Clippy
+
 ## Purpose
 
 The goal of this repository is to reinforce Rust fundamentals by solving short exercises that focus on core language concepts such as ownership, borrowing, error handling, and Rust syntax.
