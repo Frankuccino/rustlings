@@ -4,8 +4,8 @@ This repository contains my progress and solutions while working through **Rustl
 
 ## Progress
 
-- [ ] Intro
-- [ ] Variables
+- [ / ] Intro
+- [ / ] Variables
 - [ ] Functions
 - [ ] If
 - [ ] Primitive Types
