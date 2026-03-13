@@ -24,14 +24,16 @@ impl Package {
     }
 
     // TODO: Add the correct return type to the function signature.
-    fn is_international(&self) {
+    fn is_international(&self) -> bool {
         // TODO: Read the tests that use this method to find out when a package
         // is considered international.
+        self.sender_country != self.recipient_country
     }
 
     // TODO: Add the correct return type to the function signature.
-    fn get_fees(&self, cents_per_gram: u32) {
+    fn get_fees(&self, cents_per_gram: u32) -> u32 {
         // TODO: Calculate the package's fees.
+        self.weight_in_grams * cents_per_gram
     }
 }
 
@@ -85,3 +87,13 @@ mod tests {
         assert_eq!(package.get_fees(cents_per_gram * 2), 9000);
     }
 }
+
+
+// So there are 4 tests in total
+// There is 1 struct: Package Struct
+// There is 1 Implementation block (I need to research about this)
+
+// In the impl block; there are 3 functions, one of it is 'new' which is the static function, and the other 2 needs to be corrected.
+// Those functions are: 'is_international' and 'get_fees'
+
+// We jsut need
