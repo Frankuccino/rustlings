@@ -1,13 +1,29 @@
 fn trim_me(input: &str) -> &str {
     // TODO: Remove whitespace from both ends of a string.
+    input.trim()
 }
 
 fn compose_me(input: &str) -> String {
     // TODO: Add " world!" to the string! There are multiple ways to do this.
+    let mut result = input.to_string();
+    result.push_str(" world!");
+    result
 }
 
 fn replace_me(input: &str) -> String {
     // TODO: Replace "cars" in the string with "balloons".
+    // let result = input.split(" ");
+    // let mut vec = vec![];
+    // for word in result {
+    //     if word == "cars" {
+    //         vec.push("balloons");
+    //         continue
+    //     }
+    //     vec.push(word)
+    // };
+    // vec.join(" ")
+
+    input.replace("cars", "balloons")
 }
 
 fn main() {
