@@ -2,18 +2,20 @@
 
 This repository contains my progress and solutions while working through **Rustlings**, a set of small exercises designed to help developers learn the Rust programming language through hands-on practice.
 
+## Up Next
+
 ## Progress
 
 - [x] Intro
 - [x] Variables
 - [x] Functions
-- [ ] If
-- [ ] Primitive Types
-- [ ] Vecs
-- [ ] Move Semantics
-- [ ] Structs
-- [ ] Enums
-- [ ] Strings
+- [x] If
+- [x] Primitive Types
+- [x] Vecs
+- [x] Move Semantics
+- [x] Structs
+- [x] Enums
+- [x] Strings
 - [ ] Modules
 - [ ] Hashmaps
 - [ ] Options
