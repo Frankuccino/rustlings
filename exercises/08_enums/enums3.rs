@@ -46,6 +46,23 @@ impl State {
     fn process(&mut self, message: Message) {
         // TODO: Create a match expression to process the different message
         // variants using the methods defined above.
+        match message {
+            Message::Resize{width, height} => {
+                self.resize(width, height);
+            }
+            Message::Move(point) => {
+                self.move_position(point)
+            }
+            Message::Echo(s) => {
+                self.echo(s);
+            }
+            Message::ChangeColor(red, green, blue) => {
+                self.change_color(red, green, blue);
+            }
+            Message::Quit => {
+                self.quit();
+            }
+        };
     }
 }
 
@@ -86,3 +103,26 @@ mod tests {
         assert!(state.quit);
     }
 }
+
+// Enum      → describes possible commands/messages
+// match     → decides which command was received
+// impl      → contains the logic that performs the command
+
+/*
+Resize { width: 800, height: 600 }
+Move(Point {x:10, y:20})
+Echo("hello")
+
+So enums are data + type-safe variants.
+*/
+
+// Why match Works So Well With Enums
+// Rust’s match can destructure the data inside enum variants.
+
+// Example:
+// Message::Resize { width, height }
+
+// This means: If the message is Resize extract width and height
+// Then you pass those values into the method:
+
+// self.resize(width, height)

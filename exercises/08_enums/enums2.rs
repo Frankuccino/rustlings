@@ -4,9 +4,20 @@ struct Point {
     y: u64,
 }
 
+struct Dimensions {
+    width: u64,
+    height: u64,
+} // This does not work for the Resize Variant of the Message Enum
+// I just went ahead and made a struct-like variant for Resize variant.
+
 #[derive(Debug)]
 enum Message {
     // TODO: Define the different variants used below.
+    Resize{width: u64, height: u64}, // here -> Struct-like variant
+    Move(Point), // these are tuple-struct variants
+    Echo(String), // Just a tuple variant.
+    ChangeColor(u32,u32,u32), // This is a tuple variants, multiple types
+    Quit // This is a Unit Variant
 }
 
 impl Message {
