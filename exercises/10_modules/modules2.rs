@@ -3,8 +3,8 @@
 
 mod delicious_snacks {
     // TODO: Add the following two `use` statements after fixing them.
-    // use self::fruits::PEAR as ???;
-    // use self::veggies::CUCUMBER as ???;
+    pub use self::fruits::PEAR as fruit;
+    pub use self::veggies::CUCUMBER as veggie;
 
     mod fruits {
         pub const PEAR: &str = "Pear";
@@ -24,3 +24,7 @@ fn main() {
         delicious_snacks::veggie,
     );
 }
+
+// Adding the keyword 'pub' use is called re-exporting because we're bringing an item into scope but also making that item available for other to bring into their scope.
+
+// The example about means Re-export PEAR as 'fruit' as top-level, so that means outside the module scope, you can gain direct access with that instance.

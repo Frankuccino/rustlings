@@ -5,7 +5,7 @@ mod sausage_factory {
         String::from("Ginger")
     }
 
-    fn make_sausage() {
+    pub fn make_sausage() {
         get_secret_recipe();
         println!("sausage!");
     }
@@ -14,3 +14,7 @@ mod sausage_factory {
 fn main() {
     sausage_factory::make_sausage();
 }
+
+// Code within a module is private from its parent modules by default.
+
+// Add the keyword 'pub' before their declarations to make it public
