@@ -16,8 +16,8 @@ This repository contains my progress and solutions while working through **Rustl
 - [x] Structs
 - [x] Enums
 - [x] Strings
-- [ ] Modules
-- [ ] Hashmaps
+- [x] Modules
+- [x] Hashmaps
 - [ ] Options
 - [ ] Error Handling
 - [ ] Generics
