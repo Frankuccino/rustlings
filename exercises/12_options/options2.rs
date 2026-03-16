@@ -10,7 +10,7 @@ mod tests {
         let optional_target = Some(target);
 
         // TODO: Make this an if-let statement whose value is `Some`.
-        word = optional_target {
+        if let Some(word) = optional_target {
             assert_eq!(word, target);
         }
     }
@@ -29,7 +29,7 @@ mod tests {
         // TODO: Make this a while-let statement. Remember that `Vec::pop()`
         // adds another layer of `Option`. You can do nested pattern matching
         // in if-let and while-let statements.
-        integer = optional_integers.pop() {
+        while let Some(Some(integer)) = optional_integers.pop() {
             assert_eq!(integer, cursor);
             cursor -= 1;
         }
@@ -37,3 +37,13 @@ mod tests {
         assert_eq!(cursor, 0);
     }
 }
+// You can see at line 23, we used an inclusive range syntax:
+// start..=end.   -- Which we iterate from the start and up to including the end.
+// unlike in an exclusive range, we actually exclude the end.
+// like 0..5, means we go 0,1,2,3,4
+
+// We did an inclusive range syntax on line23 1..=10, to push the values 1 to 10 in the vector as a Some() Variant
+
+// Then with the while let we actually pop every element on that vector to extract the values using Some(Some(value));
+// The reason why it is a nested Some pattern match because each element in the vector is itself an Option.
+// If the value is just simple a Some(value), we could extract it through just doing Some(value), but since the element in the vector itself is an Option

@@ -4,6 +4,13 @@
 // `hour_of_day` is higher than 23.
 fn maybe_ice_cream(hour_of_day: u16) -> Option<u16> {
     // TODO: Complete the function body.
+    if hour_of_day < 22 {
+        Some(5)
+    } else if hour_of_day <= 23 {
+        Some(0)
+    } else {
+        None
+    }
 }
 
 fn main() {
@@ -18,8 +25,8 @@ mod tests {
     fn raw_value() {
         // TODO: Fix this test. How do you get the value contained in the
         // Option?
-        let ice_creams = maybe_ice_cream(12);
-
+        let ice_creams = maybe_ice_cream(12).unwrap();
+        
         assert_eq!(ice_creams, 5); // Don't change this line.
     }
 
@@ -34,3 +41,7 @@ mod tests {
         assert_eq!(maybe_ice_cream(25), None);
     }
 }
+
+// So for the function 'maybe_ice_cream', we just want to return the value as an Option enum, base on if statement as specified from the above.
+
+// on the function 'raw_value' we need to use the method 'unwrap' on the function call that returns an Option so that we can extract the value inside an Option or Result, but in this exercise we used it for the Option.
