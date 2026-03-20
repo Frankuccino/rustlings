@@ -18,10 +18,10 @@ This repository contains my progress and solutions while working through **Rustl
 - [x] Strings
 - [x] Modules
 - [x] Hashmaps
-- [ ] Options
-- [ ] Error Handling
-- [ ] Generics
-- [ ] Lifetimes
+- [x] Options
+- [x] Error Handling
+- [x] Generics
+- [x] Lifetimes
 - [ ] Tests
 - [ ] Iterators
 - [ ] Smart Pointers
