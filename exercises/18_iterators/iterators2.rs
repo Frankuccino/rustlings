@@ -15,6 +15,7 @@ fn capitalize_first(input: &str) -> String {
     }
 }
 
+
 // TODO: Apply the `capitalize_first` function to a slice of string slices.
 // Return a vector of strings.
 // ["hello", "world"] -> ["Hello", "World"]
