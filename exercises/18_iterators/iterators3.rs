@@ -41,8 +41,7 @@ fn list_of_results() -> Vec<Result<i64, DivisionError>> {
     let numbers = [27, 297, 38502, 81];
     let division_results = numbers
         .into_iter()
-        .map(|n| divide(n, 27))
-        .collect();
+        .map(|n| divide(n, 27)).collect();
     division_results
 }
 
