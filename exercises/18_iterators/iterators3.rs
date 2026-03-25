@@ -1,4 +1,3 @@
-use std::ops::Div;
 
 #[derive(Debug, PartialEq, Eq)]
 enum DivisionError {
