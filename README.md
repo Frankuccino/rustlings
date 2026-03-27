@@ -22,12 +22,13 @@ This repository contains my progress and solutions while working through **Rustl
 - [x] Error Handling
 - [x] Generics
 - [x] Lifetimes
-- [ ] Tests
-- [ ] Iterators
-- [ ] Smart Pointers
-- [ ] Threads
-- [ ] Macros
-- [ ] Clippy
+- [x] Tests
+- [x] Iterators
+- [x] Smart Pointers
+- [x] Threads
+- [x] Macros
+- [x] Clippy
+- [x] Conversions
 
 ## Purpose
 
