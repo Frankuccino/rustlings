@@ -29,11 +29,11 @@ impl TryFrom<(i16, i16, i16)> for Color {
     type Error = IntoColorError;
 
     fn try_from(tuple: (i16, i16, i16)) -> Result<Self, Self::Error> {
-        let (r,g,b) = tuple;
+        let (r, g, b) = tuple;
 
         match (u8::try_from(r), u8::try_from(g), u8::try_from(b)) {
-            (Ok(red), Ok(green), Ok(blue)) => Ok(Color {red, green, blue}),
-            _ => Err(IntoColorError::IntConversion),
+            (Ok(red), Ok(green), Ok(blue)) => Ok(Color { red, green, blue }),
+            _ => Err(IntoColorError::IntConversion)
         }
     }
 }
@@ -56,9 +56,7 @@ impl TryFrom<&[i16]> for Color {
         if slice.len() != 3 {
             return Err(IntoColorError::BadLen);
         }
-
         Color::try_from((slice[0], slice[1], slice[2]))
-
     }
 }
 
