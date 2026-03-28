@@ -44,18 +44,19 @@ impl FromStr for Person {
     fn from_str(s: &str) -> Result<Self, Self::Err> {
         let mut split = s.split(",");
 
-        match (split.next(),split.next(),split.next()) {
-            (Some(name), Some(age_str), None) => {
+        match (split.next(), split.next(), split.next()) {
+            (Some(name), Some(age), None) => {
                 if name.is_empty() {
                     return Err(ParsePersonError::NoName);
                 }
-    
-                match age_str.parse::<u8>() {
-                    Ok(age) => Ok(Person {name: name.to_string(), age}),
+
+                match age.parse::<u8>() {
+                    Ok(age) => Ok(Person {name: name.to_string(), age: age}),
                     Err(e) => Err(ParsePersonError::ParseInt(e))
                 }
-            }
-            _ => Err(ParsePersonError::BadLen)
+
+            },
+            _ => Err(ParsePersonError::BadLen),
         }
     }
 }
