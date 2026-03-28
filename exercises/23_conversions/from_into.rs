@@ -37,41 +37,17 @@ impl From<&str> for Person {
     fn from(s: &str) -> Self {
         let mut split = s.split(",");
 
-        match (split.next(), split.next(), split.next()){
+        match (split.next(), split.next(), split.next()) {
             (Some(name), Some(age_str), None) if !name.is_empty() => {
                 match age_str.parse::<u8>() {
-                    Ok(age) => Person {name: name.to_string(), age},
+                    Ok(age) => Person {name: name.to_string(), age: age},
                     Err(_) => Person::default(),
                 }
-            },
-            _ => Person::default()
+            }
+            _ => Person::default(),
         }
     }
 }
-
-// impl From<&str> for Person {
-//     fn from(s: &str) -> Self {
-//         let parts: Vec<&str> = s.split(',').collect();
-
-//         // Step 2 & 4: Check length and if name is empty
-//         if parts.len() == 2 && !parts[0].is_empty() {
-//             let name = parts[0];
-//             let age_str = parts[1];
-
-//             // Step 5 & 6: Parse age and return Person or Default
-//             match age_str.parse::<u8>() {
-//                 Ok(age) => Person {
-//                     name: name.to_string(),
-//                     age,
-//                 },
-//                 Err(_) => Person::default(),
-//             }
-//         } else {
-//             // Fallback for steps 2 and 4
-//             Person::default()
-//         }
-//     }
-// }
 
 fn main() {
     // Use the `from` function.
