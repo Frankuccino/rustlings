@@ -1,6 +1,6 @@
 DON'T EDIT THIS FILE!
 
-threads2
+threads3
 
 intro1
 intro2
@@ -81,7 +81,6 @@ box1
 rc1
 arc1
 cow1
-threads3
 macros1
 macros2
 macros3
