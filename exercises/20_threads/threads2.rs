@@ -31,6 +31,6 @@ fn main() {
     }
 
     // TODO: Print the value of `JobStatus.jobs_done`.
-    let final_status = status.lock().unwrap();
-    println!("Jobs done: {}", final_status.jobs_done);
+    let final_status_guard = status.lock().unwrap();
+    println!("Jobs done: {}", final_status_guard.jobs_done);
 }
