@@ -1,6 +1,6 @@
 DON'T EDIT THIS FILE!
 
-traits4
+traits5
 
 intro1
 intro2
@@ -60,7 +60,6 @@ errors5
 errors6
 generics1
 generics2
-traits5
 quiz3
 tests1
 tests2
